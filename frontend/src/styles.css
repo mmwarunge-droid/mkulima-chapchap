@@ -1,0 +1,234 @@
+/* Clean responsive CSS without external UI frameworks. */
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #1f2937;
+  background: #f6f7f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #1f6f43;
+  text-decoration: none;
+}
+
+button,
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #1f6f43;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+}
+
+button:hover,
+.button:hover {
+  opacity: 0.9;
+}
+
+.secondary {
+  background: #e5f4ea;
+  color: #1f6f43;
+}
+
+.danger {
+  background: #b42318;
+}
+
+.small {
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.link-button {
+  background: none;
+  color: #1f6f43;
+  padding: 0;
+}
+
+.center {
+  align-self: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: #1f6f43;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.auth-page {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.auth-page .form {
+  width: min(420px, 100%);
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.error {
+  background: #fee4e2;
+  color: #912018;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.animal-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.animal-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.reminder-list,
+.record-list {
+  padding-left: 1rem;
+}
+
+.record-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 0;
+}
+
+.record-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 760px) {
+  .navbar,
+  .page-heading,
+  .animal-card,
+  .record-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
