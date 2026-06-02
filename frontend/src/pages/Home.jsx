@@ -11,9 +11,7 @@ function Home() {
         <p className="eyebrow">Simple farm health records</p>
         <h1>Track animals, vet records, costs, weights, and reminders.</h1>
         <p>
-          Mkulima Chapchap is a basic React + Flask app for farmers. It is
-          intentionally simple so it can pass a student bootcamp assessment while
-          remaining fully functional.
+          Mkulima Chapchap helps you keep track of your farm's health records in one place, so you can focus on what matters most: your animals and your farm.
         </p>
         <Link className="button" to={user ? "/dashboard" : "/login"}>
           {user ? "Go to dashboard" : "Start now"}
