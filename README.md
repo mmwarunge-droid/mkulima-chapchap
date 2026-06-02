@@ -39,37 +39,37 @@ This project is intentionally simple and bootcamp-friendly, but it is fully func
 
 ### Frontend Requirements
 
-| Requirement | Implemented? | Where |
-|---|---:|---|
-| React functional components | Yes | All components/pages use functions |
-| React Hooks | Yes | `useState`, `useEffect`, `useContext` |
-| React Router | Yes | `src/App.jsx` |
-| Consume Flask backend | Yes | `src/services/api.js` uses `fetch` |
-| Clean responsive UI | Yes | `src/styles.css` |
-| Home page | Yes | `src/pages/Home.jsx` |
-| Login/Register page | Yes | `src/pages/LoginRegister.jsx` |
-| Dashboard/main page | Yes | `src/pages/Dashboard.jsx` |
-| Protected routes | Yes | `src/components/ProtectedRoute.jsx` |
-| Context/state management | Yes | `src/context/AuthContext.jsx` |
-| Components folder | Yes | `src/components` |
-| Pages folder | Yes | `src/pages` |
-| Services/API folder | Yes | `src/services` |
+| Requirement                 | Implemented? | Where                                 |
+| --------------------------- | -----------: | ------------------------------------- |
+| React functional components |          Yes | All components/pages use functions    |
+| React Hooks                 |          Yes | `useState`, `useEffect`, `useContext` |
+| React Router                |          Yes | `src/App.jsx`                         |
+| Consume Flask backend       |          Yes | `src/services/api.js` uses `fetch`    |
+| Clean responsive UI         |          Yes | `src/styles.css`                      |
+| Home page                   |          Yes | `src/pages/Home.jsx`                  |
+| Login/Register page         |          Yes | `src/pages/LoginRegister.jsx`         |
+| Dashboard/main page         |          Yes | `src/pages/Dashboard.jsx`             |
+| Protected routes            |          Yes | `src/components/ProtectedRoute.jsx`   |
+| Context/state management    |          Yes | `src/context/AuthContext.jsx`         |
+| Components folder           |          Yes | `src/components`                      |
+| Pages folder                |          Yes | `src/pages`                           |
+| Services/API folder         |          Yes | `src/services`                        |
 
 ### Backend Requirements
 
-| Requirement | Implemented? | Where |
-|---|---:|---|
-| Flask | Yes | `backend/app.py` |
-| Flask SQLAlchemy | Yes | `backend/extensions.py`, `backend/models` |
-| REST API principles | Yes | `/api/...` endpoints |
-| SQLite or PostgreSQL | Yes | SQLite by default; PostgreSQL supported by `DATABASE_URL` |
-| Proper models | Yes | `backend/models/__init__.py` |
-| Routes/Blueprints | Yes | `backend/routes` |
-| Serializers | Yes | `to_dict()` methods in models |
-| CRUD operations | Yes | Animals, weights, health records |
-| Environment variables | Yes | `.env.example`, `config.py` |
-| JWT authentication | Yes | `auth_routes.py` |
-| Seed file | Yes | `backend/seed.py` |
+| Requirement           | Implemented? | Where                                                     |
+| --------------------- | -----------: | --------------------------------------------------------- |
+| Flask                 |          Yes | `backend/app.py`                                          |
+| Flask SQLAlchemy      |          Yes | `backend/extensions.py`, `backend/models`                 |
+| REST API principles   |          Yes | `/api/...` endpoints                                      |
+| SQLite or PostgreSQL  |          Yes | SQLite by default; PostgreSQL supported by `DATABASE_URL` |
+| Proper models         |          Yes | `backend/models/__init__.py`                              |
+| Routes/Blueprints     |          Yes | `backend/routes`                                          |
+| Serializers           |          Yes | `to_dict()` methods in models                             |
+| CRUD operations       |          Yes | Animals, weights, health records                          |
+| Environment variables |          Yes | `.env.example`, `config.py`                               |
+| JWT authentication    |          Yes | `auth_routes.py`                                          |
+| Seed file             |          Yes | `backend/seed.py`                                         |
 
 ---
 
@@ -106,25 +106,25 @@ This is implemented using the `favorites` association table.
 
 The project has more than 10 protected routes. These routes require a valid JWT token in the `Authorization` header.
 
-| No. | Method | Route | Purpose |
-|---:|---|---|---|
-| 1 | POST | `/api/auth/logout` | Logout confirmation |
-| 2 | GET | `/api/auth/me` | Get logged-in user |
-| 3 | GET | `/api/animals` | List user animals |
-| 4 | POST | `/api/animals` | Add animal |
-| 5 | GET | `/api/animals/<id>` | View one animal |
-| 6 | PUT | `/api/animals/<id>` | Update animal |
-| 7 | DELETE | `/api/animals/<id>` | Delete animal |
-| 8 | POST | `/api/animals/<id>/favorite` | Favorite animal |
-| 9 | DELETE | `/api/animals/<id>/favorite` | Unfavorite animal |
-| 10 | GET | `/api/animals/<id>/weights` | List weights |
-| 11 | POST | `/api/animals/<id>/weights` | Add weight |
-| 12 | DELETE | `/api/weights/<id>` | Delete weight |
-| 13 | GET | `/api/animals/<id>/health-records` | List health records |
-| 14 | POST | `/api/animals/<id>/health-records` | Add health record |
-| 15 | PUT | `/api/health-records/<id>` | Update health record |
-| 16 | DELETE | `/api/health-records/<id>` | Delete health record |
-| 17 | GET | `/api/reminders` | View upcoming reminders |
+| No. | Method | Route                              | Purpose                 |
+| --: | ------ | ---------------------------------- | ----------------------- |
+|   1 | POST   | `/api/auth/logout`                 | Logout confirmation     |
+|   2 | GET    | `/api/auth/me`                     | Get logged-in user      |
+|   3 | GET    | `/api/animals`                     | List user animals       |
+|   4 | POST   | `/api/animals`                     | Add animal              |
+|   5 | GET    | `/api/animals/<id>`                | View one animal         |
+|   6 | PUT    | `/api/animals/<id>`                | Update animal           |
+|   7 | DELETE | `/api/animals/<id>`                | Delete animal           |
+|   8 | POST   | `/api/animals/<id>/favorite`       | Favorite animal         |
+|   9 | DELETE | `/api/animals/<id>/favorite`       | Unfavorite animal       |
+|  10 | GET    | `/api/animals/<id>/weights`        | List weights            |
+|  11 | POST   | `/api/animals/<id>/weights`        | Add weight              |
+|  12 | DELETE | `/api/weights/<id>`                | Delete weight           |
+|  13 | GET    | `/api/animals/<id>/health-records` | List health records     |
+|  14 | POST   | `/api/animals/<id>/health-records` | Add health record       |
+|  15 | PUT    | `/api/health-records/<id>`         | Update health record    |
+|  16 | DELETE | `/api/health-records/<id>`         | Delete health record    |
+|  17 | GET    | `/api/reminders`                   | View upcoming reminders |
 
 ---
 
@@ -245,7 +245,7 @@ http://localhost:5000/
 You should see:
 
 ```json
-{"message":"Mkulima Chapchap Flask API is running."}
+{ "message": "Mkulima Chapchap Flask API is running." }
 ```
 
 ---
