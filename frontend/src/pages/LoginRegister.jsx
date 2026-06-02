@@ -59,7 +59,6 @@ function LoginRegister() {
           {isRegister ? "Already have an account? Login" : "Need an account? Register"}
         </button>
 
-        <p className="hint">Demo login after seeding: farmer@example.com / password123</p>
       </form>
     </section>
   );
